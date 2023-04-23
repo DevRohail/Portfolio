@@ -1,0 +1,17 @@
+.icon-container {
+    position: absolute;
+    width: 100px;
+    height: 1280px;
+    background-color: transparent;
+    bottom:0;
+  }
+  
+  [class="fa-brands fa-discord fa-2xl"]{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+  }
+  
