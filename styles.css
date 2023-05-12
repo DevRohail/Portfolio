@@ -45,6 +45,9 @@ section:nth-child(5){
  }
 section h1{
 font-size: 60px;
+position: relative;
+text-align: left;
+
 
 }
 section h2{
@@ -94,8 +97,6 @@ section .cards{
 [id="contact section"]{
     height: 125px;
 }
-
-
 
 
 
