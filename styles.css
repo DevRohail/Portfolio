@@ -11,7 +11,7 @@ body{
     background: #1d212b;
 }
 
-section{
+section {
   min-height: 100vh;
 display: flex;
 justify-content: center;
@@ -46,7 +46,7 @@ section:nth-child(5){
 section h1{
 font-size: 60px;
 position: relative;
-text-align: left;
+top: 170px;
 
 
 }
@@ -73,9 +73,7 @@ margin-bottom: 10px;
 }
 
 @media (max-width:900px){
-section h1{
-    font-size: 40px;
-}
+
 
 section .cards{
     flex-direction:column;
@@ -97,6 +95,69 @@ section .cards{
 [id="contact section"]{
     height: 125px;
 }
+
+.center {
+   position: absolute;
+   justify-content: center;
+  height: 300px;
+  border-radius: 50px;
+  margin-bottom: 50px;
+
+    }
+
+
+body { margin:0px; }
+*,
+*:before,
+*:after{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+nav {
+width: 100vw;
+height: 9vh;
+min-width: 600px;
+display: flex;
+align-items:center;
+justify-content: space-evenly;
+margin: auto;
+position:fixed;
+left: 0;
+right: 0;
+top: 0;
+
+}
+
+a {
+    position: relative;
+    text-decoration:none;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+
+
+
+a:after{
+content: "";
+position: absolute;
+background-color: #ff3c78;
+height: 3px;
+width: 100%;
+left: 0;
+bottom: -10px;
+transition: 0.3s;
+}
+
+a:hover::after
+{
+    width: 100%;
+}
+
+
 
 
 
