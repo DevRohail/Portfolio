@@ -56,7 +56,7 @@ text-align: center;
 padding-top: auto;
 margin-top: calc(5vh - -10%);
 padding-bottom: 200%;
-margin-top: 480px;
+margin-top: calc(480px + 0.9vh);
 
 }
 section h2{
