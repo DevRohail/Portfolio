@@ -53,9 +53,10 @@ top:15vh ;
 justify-content: center;
 height: auto;
 text-align: center;
-padding-top: 275px;
+padding-top: auto;
 margin-top: calc(5vh - -10%);
 padding-bottom: 200%;
+margin-top: 480px;
 
 }
 section h2{
@@ -106,11 +107,12 @@ min-width:  250px;
 }
 
 .center {
-   position: absolute;
+   position:relative;
    justify-content: center;
   max-height: 300px;
   border-radius: 50px;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
+
 
     }
 
