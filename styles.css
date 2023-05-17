@@ -48,10 +48,14 @@ section:nth-child(5){
 section h1{
 font-size: 60px;
 position: absolute;
-top: 170px;
+top: 21%;
 justify-content: center;
-padding-top: 260px;
+padding-top: calc(20% + 15px);
 text-align: center;
+padding-top: 275px;
+margin-top: 5%;
+padding-bottom: 200%;
+
 
 }
 section h2{
@@ -74,6 +78,7 @@ font-size: 30px;
 text-align: center;
 text-transform: uppercase;
 margin-bottom: 10px;
+min-width:  250px; 
 }
 
 @media (max-width:900px){
