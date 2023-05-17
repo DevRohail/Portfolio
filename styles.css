@@ -9,6 +9,8 @@
 
 body{
     background: #1d212b;
+    flex-direction:column;
+
 }
 
 section {
@@ -45,9 +47,11 @@ section:nth-child(5){
  }
 section h1{
 font-size: 60px;
-position: relative;
+position: absolute;
 top: 170px;
-
+justify-content: center;
+padding-top: 260px;
+text-align: center;
 
 }
 section h2{
@@ -75,9 +79,9 @@ margin-bottom: 10px;
 @media (max-width:900px){
 
 
-section .cards{
-    flex-direction:column;
-}
+    section .cards{
+        flex-direction:column;
+    }
 }
 .reveal{
     position: relative;
@@ -117,7 +121,7 @@ box-sizing: border-box;
 #navbar {
 width: 98%;
 height: 9vh;
-min-width: 600px;
+max-width: 100%;
 display: flex;
 align-items:center;
 justify-content: space-evenly;
@@ -129,7 +133,8 @@ top: 0;
 background-color: #333;
 z-index: 999;
 border-radius: 100px;
-margin-top: 4px
+margin-top: 4px;
+
 }
 
 a {
@@ -178,12 +183,7 @@ header {
 
 /**/
 
-
-
-
-
-
-
+  
 
 
 
@@ -200,3 +200,9 @@ header {
   .sticky + .content {
     padding-top: 60px;
   }
+
+
+  
+
+
+
