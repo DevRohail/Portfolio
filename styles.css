@@ -22,7 +22,7 @@ height: auto;
 }
 section:nth-child(1){
     color: #fff;
-
+margin-bottom: 110px;
 }
 section:nth-child(2){
     color: #1d212b;
@@ -49,15 +49,14 @@ section:nth-child(5){
 section h1{
 font-size: 60px;
 position: absolute;
-top: 12vh ;
+top: 1vh;
 justify-content: center;
 height: auto;
 text-align: center;
-padding-top: auto;
-margin-top: calc(5vh - -10%);
+padding-top:200px ;
+
 padding-bottom: 195%;
-margin-top: calc(480px + 0.9vh);
-margin-bottom: ;
+margin-top:200px ;
 }
 section h2{
 font-size: 40px;
@@ -183,7 +182,7 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    padding: 50px;
+    margin: 100%;
     font-size: 20px;
 }
 
@@ -210,6 +209,25 @@ header {
 
 
   
+  @media (max-width:432px){
+    section h1 {padding-top:60% ;
+;}
 
+    section .cards{
+        flex-direction:column;
+    }
+}
+  
+
+@media (min-width:433px){
+    section h1 {padding-top:250px;}
+
+}
+
+
+@media (min-width:1500px){
+    section h1 {padding-top:20% ;}
+
+}
 
 
