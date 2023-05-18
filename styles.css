@@ -49,12 +49,12 @@ section:nth-child(5){
 section h1{
 font-size: 60px;
 position: absolute;
-top:550px;
+top:73%;
 justify-content: center;
 height: auto;
 text-align: center;
 padding-top: auto;
-
+padding-bottom: auto;
 
 }
 section h2{
@@ -137,12 +137,9 @@ right: 0;
 top: 0;
 background-color: #333;
 z-index: 999;
-<<<<<<< HEAD
 border-radius: 100px;
 margin-top: 4px;
 
-=======
->>>>>>> parent of 9e55851 (Update styles.css)
 }
 
 a {
