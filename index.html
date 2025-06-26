@@ -7,7 +7,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <link rel="icon" href="/images/favicon.png" type="image/png">
   <style>
-    /* Reset & base */
     * {
       box-sizing: border-box;
       margin: 0; padding: 0;
@@ -31,14 +30,12 @@
       color: #0ff;
       outline: none;
     }
-    /* Container */
     .container {
       max-width: 900px;
       margin: auto;
       padding: 2rem 1rem 4rem;
       flex-grow: 1;
     }
-    /* Fixed nav */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -62,7 +59,6 @@
       border-bottom-color: #0ff;
       color: #0ff;
     }
-    /* Hero Section */
     header {
       min-height: 100vh;
       display: flex;
@@ -108,7 +104,6 @@
       background-color: #0ff;
       color: #121212;
     }
-    /* Sections */
     section {
       padding: 5rem 0;
       border-bottom: 1px solid #222;
@@ -116,16 +111,9 @@
       transform: translateY(50px);
       animation: fadeInUp 1s ease forwards;
     }
-    section:nth-of-type(2) {
-      animation-delay: 0.3s;
-    }
-    section:nth-of-type(3) {
-      animation-delay: 0.6s;
-    }
-    section:nth-of-type(4) {
-      animation-delay: 0.9s;
-      border: none;
-    }
+    section:nth-of-type(2) { animation-delay: 0.3s; }
+    section:nth-of-type(3) { animation-delay: 0.6s; }
+    section:nth-of-type(4) { animation-delay: 0.9s; border: none; }
     section h2 {
       font-weight: 800;
       font-size: 2.5rem;
@@ -135,7 +123,6 @@
       text-align: center;
       text-transform: uppercase;
     }
-    /* About text */
     #about p {
       max-width: 700px;
       margin: auto;
@@ -144,27 +131,29 @@
       line-height: 1.7;
       text-align: center;
     }
-    /* Projects grid */
+
+    /* Projects layout changed to flex */
     #projects .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
       gap: 2rem;
-      max-width: 900px;
-      width: 90%;
+      max-width: 100%;
       margin: 2rem auto 0;
       padding: 0 1rem;
     }
+
     .project-card {
       background: #1a1a1a;
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
       padding: 2rem;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: default;
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      max-width: 400px;
+      flex: 1 1 300px;
+      max-width: 380px;
       margin: 0 auto;
     }
     .project-card:hover {
@@ -184,7 +173,6 @@
       font-size: 1rem;
       flex-grow: 1;
     }
-    /* Contact */
     #contact p {
       text-align: center;
       font-size: 1.2rem;
@@ -195,6 +183,7 @@
       display: flex;
       justify-content: center;
       gap: 2.5rem;
+      flex-wrap: wrap;
     }
     #contact a.contact-link {
       font-size: 1.6rem;
@@ -212,7 +201,6 @@
       background-color: #0ff;
       color: #121212;
     }
-    /* Footer */
     footer {
       text-align: center;
       padding: 1.5rem 1rem;
@@ -220,7 +208,6 @@
       color: #444;
       background: #111;
     }
-    /* Animations */
     @keyframes fadeInDown {
       to {
         opacity: 1;
@@ -233,7 +220,6 @@
         transform: translateY(0);
       }
     }
-    /* Responsive tweaks */
     @media (max-width: 600px) {
       nav a {
         margin: 0 0.8rem;
@@ -246,8 +232,8 @@
         font-size: clamp(2rem, 7vw, 4rem);
       }
       #projects .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
       }
       .project-card {
         padding: 1.5rem;
@@ -275,7 +261,7 @@
   <section id="about" class="container">
     <h2>About Me</h2>
     <p>
-      I’m passionate about technology, coding, Artificial intelligence, and building useful projects.
+      I'm passionate about technology, coding, Artificial intelligence, and building useful projects.
       Constantly learning and exploring new ideas in software and hardware.
     </p>
   </section>
@@ -295,6 +281,14 @@
         <h3><i class="fas fa-broadcast-tower"></i> Broadcast Support</h3>
         <p>Assist with live broadcasts at MTA International every weekend, including camera operation, live graphics (CG), teleprompter, editing, lighting, VT, and more.</p>
       </div>
+      <div class="project-card">
+        <h3><i class="fa-regular fa-paste"></i> OneClip </h3>
+        <p>Built a minimal and secure clip-sharing web app with auto-expiry options (after 1 hour, 1 view, or 24 hours). Features include clean UI, image/file pasting, and emoji support using Font Awesome.</p>
+      </div>
+      <div class="project-card">
+        <h3><i class="fa-solid fa-bell"></i> Kahoot-style Buzzer App</h3>
+        <p>Developed a real-time buzzer web app using Node.js and Socket.IO with instant “first buzz” detection. Includes room creation, lobby system, and separate admin/player interfaces with a polished UI.</p>
+      </div>  
     </div>
   </section>
 
@@ -302,9 +296,9 @@
     <h2>Contact</h2>
     <p>Feel free to reach out for collaboration or work experience opportunities.</p>
     <div class="contact-links">
-      <a href="mailto:ahmedrohail2010@gmail.com" class="contact-link" aria-label="Email"><i class="fas fa-envelope"></i> Email</a>
-      <a href="https://www.linkedin.com/in/rohailah/" class="contact-link" aria-label="Linkedin"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
-      <a href="https://www.instagram.com/ahmedrohail_/" class="contact-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="mailto:ahmedrohail2010@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://www.linkedin.com/in/rohailah/" class="contact-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a href="https://www.instagram.com/ahmedrohail_/" class="contact-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
     </div>
   </section>
 
@@ -313,7 +307,6 @@
   </footer>
 
   <script>
-    // Highlight active nav link on scroll
     const sections = document.querySelectorAll('section, header');
     const navLinks = document.querySelectorAll('nav a');
 
